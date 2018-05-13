@@ -69,11 +69,10 @@ npc.programs.register("mg_villages_npc:farmer:walk_to_field", function(self, arg
             new_program = "advanced_npc:walk_to_pos",
             new_args = {
                 end_pos = target_pos,
-                walkable = {"cottages:wagon_wheel"}
+                walkable
+                 = {"cottages:wagon_wheel"}
             },
-            interrupt_options = {},
-            -- Disable program restore on interrupt end_pos
-            enable_restore = false
+            interrupt_options = {}
         })
         return
     end
@@ -510,7 +509,7 @@ local farmer_def = {
                 program_name = "advanced_npc:idle",
                 arguments = {
                     acknowledge_nearby_objs = true,
-                    max_acknowledge_time = 50,
+                    max_acknowledge_time = 20,
                     wander_chance = 5
                 },
                 interrupt_options = {},

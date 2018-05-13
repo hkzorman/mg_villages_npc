@@ -1,7 +1,7 @@
 -- NPCs for mg_villages
 -- Implemented using advanced_npc mod
 
-local path = minetest.get_modpath("mg_villages_npcs")
+local path = minetest.get_modpath("mg_villages_npc")
 dofile(path .. "/data/dialogues_data.lua")
 dofile(path .. "/data/gift_items_data.lua")
 dofile(path .. "/data/names_data.lua")
@@ -10,12 +10,12 @@ dofile(path .. "/data/occupations/default_farmer.lua")
 dofile(path .. "/data/occupations/default_priest.lua")
 
 -- Register spawn egg
-npc.spawner.register_spawn_egg("mg_villages_npcs:npc")
+npc.spawner.register_spawn_egg("mg_villages_npc:npc")
 
-npc.spawner.set_mg_villages_entity_name("mg_villages_npcs:npc")
+npc.spawner.set_mg_villages_entity_name("mg_villages_npc:npc")
 
 -- Register NPC entity
-mobs:register_mob("mg_villages_npcs:npc", {
+mobs:register_mob("mg_villages_npc:npc", {
 	type = "npc",
 	passive = false,
 	damage = 3,
@@ -36,30 +36,6 @@ mobs:register_mob("mg_villages_npcs:npc", {
 	drawtype = "front",
 	textures = {
 		{"npc_male1.png"},
-		-- {"npc_male2.png"},
-		-- {"npc_male3.png"},
-		-- {"npc_male4.png"},
-		-- {"npc_male5.png"},
-		-- {"npc_male6.png"},c
-		-- {"npc_male7.png"},
-		-- {"npc_male8.png"},
-		-- {"npc_male9.png"},
-		-- {"npc_male10.png"},
-		-- {"npc_male11.png"},
-		-- {"npc_male12.png"},
-		-- {"npc_male13.png"},
-		-- {"npc_male14.png"},
-		-- {"npc_female1.png"}, -- female by nuttmeg20
-		-- {"npc_female2.png"},
-		-- {"npc_female3.png"},
-		-- {"npc_female4.png"},
-		-- {"npc_female5.png"},
-		-- {"npc_female6.png"},
-		-- {"npc_female7.png"},
-		-- {"npc_female8.png"},
-		-- {"npc_female9.png"},
-		-- {"npc_female10.png"},
-		-- {"npc_female11.png"},
 	},
 	child_texture = {
 		{"npc_child_male1.png"},
