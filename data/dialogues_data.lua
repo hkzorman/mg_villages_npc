@@ -63,7 +63,7 @@ npc.dialogue.register_dialogue({
         	text = "Yes, how can I help?",
         	action_type = "dialogue",
         	action = {
-          		text = "Could you please give me 3 "..npc.trade.prices.currency.tier3.name.."?",
+          		text = "Could you please give me 3 "..npc.trade.prices.get_currency_name('tier3').."?",
           		responses = {
             		[1] = {
               			text = "Yes, ok, here",
@@ -74,7 +74,7 @@ npc.dialogue.register_dialogue({
                   				player=player:get_player_name(), 
                   				pos=nil, 
                   				inv_list="main", 
-                  				item_name=npc.trade.prices.currency.tier3.string, 
+                  				item_name=npc.trade.prices.get_currency_itemstring('tier3'), 
                   				count=3
                 			}) then
                 				-- Send message
